@@ -1,10 +1,18 @@
 public class Uczen extends Osoba{
     private int nrUcznia;
+    public static int liczbaUczniow;
 
     public Uczen(String imie, int wiek, int nrUcznia) {
         super(imie, wiek);
         //super wywołanie konstruktora klasy bazowej
         this.nrUcznia = nrUcznia;
+        liczbaUczniow++;
+    }
+
+    public Uczen(String imie, int wiek) {
+        super(imie, wiek);
+        liczbaUczniow++;
+        nrUcznia = liczbaUczniow;
     }
 
     @Override //adnotacja mówiąca że nadpisujemy istniejącą metodę
