@@ -35,4 +35,12 @@ public class Osoba {
         } else
             this.wiek = wiek;
     }
+
+    @Override
+    public String toString() {
+        return "Osoba{" +
+                "imie='" + imie + '\'' +
+                ", wiek=" + wiek +
+                '}';
+    }
 }
