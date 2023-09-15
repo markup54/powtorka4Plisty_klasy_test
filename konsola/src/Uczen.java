@@ -10,6 +10,23 @@ public class Uczen extends Osoba{
         this.oceny = new ArrayList<>();
         licznik++;
     }
+
+    public Obecnosc getObecnosc() {
+        return obecnosc;
+    }
+
+    public void setObecnosc(Obecnosc obecnosc) {
+        this.obecnosc = obecnosc;
+    }
+
+    public static int getLicznik() {
+        return licznik;
+    }
+
+    public ArrayList<Double> getOceny() {
+        return oceny;
+    }
+
     public void sprawdzObecnosc(int o){
         switch (o){
             case 0:
@@ -24,8 +41,22 @@ public class Uczen extends Osoba{
         }
     }
     public void dopiszOcene (double ocena){
-        oceny.add(ocena);
+        //System.out.println(obecnosc);
+        if(obecnosc == Obecnosc.OBECNY || obecnosc == Obecnosc.SPOZNIONY) {
+            oceny.add(ocena);
+        }
+        else{
+            System.out.println("Nie można dopisać oceny nieobecnemu");
+        }
     }
+
+    /**
+     * nazwa funkcji obliczSrednia
+     * zastosowanie metoda słyży do obliczania średniej ocen dla danego obiektu
+     * Oceny powinny być zapisane ww własności oceny
+     * argumenty brak
+     * zwracana wartośc średnia ocen typu rzeczywistego obliczona dla wszystkich ocen
+     */
     public double obliczSrednia(){
         double s = 0;
         for(double ocena: oceny){
