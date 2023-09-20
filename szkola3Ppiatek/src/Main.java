@@ -31,5 +31,6 @@ public class Main {
         System.out.println(wychowawca);
         wychowawca.dyzuruj();
         uczen2.dyzuruj();
+        Szkola zs10 = Szkola.getSzkola("ZS 10");
     }
 }
