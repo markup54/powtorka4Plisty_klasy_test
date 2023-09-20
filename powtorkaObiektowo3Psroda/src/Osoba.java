@@ -20,6 +20,10 @@ public class Osoba {
         licznikKlasy++;
     }
     public void wypiszImie(String inneImie){
-        System.out.println("Cześć "+inneImie+" mam na imię "+imieOsoby);
+        if(imieOsoby == "")
+            System.out.println("Brak danych");
+        else {
+            System.out.println("Cześć " + inneImie + " mam na imię " + imieOsoby);
+        }
     }
 }
